@@ -18,14 +18,16 @@ export default function ContactList() {
   }
   console.log(arrContacts);
   const showArr = Array.isArray(arrContacts) && arrContacts.length;
-
+ 
+  return (
   <div>  
     <ul className={css.contactList}>
        {showArr &&
         arrContacts.map(({ id, name, number }) => {
           return <Contact key={nanoid()} id={id} name={name} number={number} />;
-        })} 
-    </ul>
-  </div >
+        })}  
+    </ul> 
+    </div >
+  ) 
 
 } 
